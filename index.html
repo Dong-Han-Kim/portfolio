@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Roboto+Mono:ital,wght@1,300&display=swap"
+      rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/36cbe3dd6a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <title>PORTFOLIO</title>
+  </head>
+  <body>
+    <header>
+      <div><img src="./image/logo-black.png" alt="Logo" /></div>
+      <nav>
+        <ul class="nav__container">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">About me</a></li>
+          <li><a href="/">Skill</a></li>
+          <li><a href="/">Work</a></li>
+          <li><a href="/">Contact Me</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section id="home">
+        <div>
+          <p class="text"></p>
+          <p class="author"></p>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about">
+        <h1 class="title">About me</h1>
+        <div class="about__content items__container">
+          <img src="./image/profile.png" alt="profile" class="avatar" />
+          <div>
+            <p>
+              안녕하세요.<br /> 프론트 엔드 개발자를 준비하는 김동한입니다. 방문해
+              주셔서 감사합니다.
+            </p>
+            <div class="edu__container">
+              <h3>Education</h3>
+              <ul class="edu__list">
+                <li>
+                  <span class="edu__date">2023.10 ~ 2023.12</span> 충청 ICT
+                  취-창업 역량강화 프로그램
+                </li>
+                <li>
+                  <span class="edu__date">2011.02 ~ 2018.02</span> 중원대학교
+                  경찰행정학과
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skill -->
+      <section id="skill" class="container">
+        <h1 class="title">Skill</h1>
+        <div class="skill__container">
+          <div class="skill__items">
+            <h1>Basic Skill</h1>
+            <img src="./image/html.png" alt="html" />
+            <img src="./image/css.png" alt="css" />
+            <img src="./image/js.png" alt="js" />
+          </div>
+          <div class="skill__items">
+            <h1>Library</h1>
+            <img src="./image/react.png" alt="react" />
+            <img src="./image/query.png" alt="react-query" />
+          </div>
+          <div class="skill__items">
+            <h1>Framework</h1>
+            <img src="./image/next.svg" alt="nextJS" />
+            <img src="./image/tailwind.svg" alt="tailwindCSS" />
+          </div>
+          <div class="skill__items">
+            <h1>Etc</h1>
+            <img src="./image/git.png" alt="github" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Work -->
+      <section id="work">
+        <h1 class="title">Work</h1>
+        <ul class="work__container">
+          <li class="work__item">
+            <img src="./image/todo.png" alt="todo" />
+            <div class="work__title">Todo List</div>
+
+            <div class="modal hidden">
+              <div class="modal__item">
+                <img src="./image/todo-modal.png" alt="todo-modal-image">
+                <h1>ToDo List</h1>
+                <ul>
+                  <li>
+                    <h4>Description</h4>
+                    <p>React를 활용한 Todo List입니다. CRUD를 구현하였습니다.</p>
+                  </li>
+                  <li>
+                    <h4>Use Skill</h4>
+                    <p>-React</p>
+                  </li>
+                  <li>
+                    <h4>Site</h4>
+                    <p><a href="https://dong-han-kim.github.io/Todo-List/">https://dong-han-kim.github.io/Todo-List/</a></p>
+                  </li>
+                  <li>
+                    <h4>Github</h4>
+                    <p><a href="https://github.com/Dong-Han-Kim/Todo-List">https://github.com/Dong-Han-Kim/Todo-List</a></p>
+                  </li>
+                </ul>
+              </div>
+              <button class="close">
+                <i class="fa-solid fa-x"></i>
+              </button>
+            </div>
+
+          </li>
+          <li class="work__item">
+            <img src="./image/netflix.png" alt="netflix" />
+            <div class="work__title">NETFLIX 클론 코딩</div>
+          </li>
+        </div>
+      </section>
+      <!-- Contact -->
+      <section id="contact" class="container">
+        <h1 class="title">Contact Me</h1>
+        <p>
+          <a href="https://www.naver.com/" class="contact__address">
+            <i class="fa-regular fa-envelope"></i>
+            dh32110@naver.com
+          </a>
+        </p>
+        <p>
+          <a href="https://www.naver.com/" class="contact__address">
+            <i class="fa-brands fa-github"></i>
+            https://github.com/Dong-Han-Kim
+          </a>
+        </p>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

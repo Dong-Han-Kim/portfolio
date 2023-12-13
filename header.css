@@ -1,0 +1,43 @@
+header {
+  display: flex;
+  flex-direction: column;
+  padding-right: 2.5rem;
+  border-right: 2px solid black;
+  margin-left: 10px;
+  align-items: center;
+}
+
+img {
+  width: 6.25rem;
+}
+
+nav {
+  height: 100vh;
+}
+
+.nav__container {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  width: 7.5rem;
+}
+
+.nav__container li {
+  margin-bottom: 2.5rem;
+}
+
+.nav__container li a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+}
+
+a:hover {
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.active {
+  border: 2px solid black;
+  border-radius: 5%;
+}
