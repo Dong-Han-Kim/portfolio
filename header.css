@@ -1,10 +1,16 @@
 header {
   display: flex;
   flex-direction: column;
-  padding-right: 2.5rem;
+  padding: 1.5rem 1.5rem 0 0;
   border-right: 2px solid black;
   margin-left: 10px;
   align-items: center;
+  text-align: center;
+  width: 7.5rem;
+}
+
+.header__container {
+  position: fixed;
 }
 
 img {
@@ -24,6 +30,7 @@ nav {
 
 .nav__container li {
   margin-bottom: 2.5rem;
+  cursor: pointer;
 }
 
 .nav__container li a {

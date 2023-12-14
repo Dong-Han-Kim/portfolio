@@ -78,3 +78,15 @@ for (let i = 0; i < workItems.length; i++) {
   modalOpen(i);
   modalClose(i);
 }
+
+// navbar
+const navItems = document.querySelectorAll(".nav__item");
+const sections = document.querySelectorAll("section");
+
+navItems.forEach((item, index) => {
+  item.addEventListener("click", () => {
+    const sectionHeight = sections[index].offsetTop;
+
+    window.scroll({ top: sectionHeight, behavior: "smooth" });
+  });
+});
