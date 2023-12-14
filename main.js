@@ -29,8 +29,8 @@ const phrase = [
 ];
 
 const headerContent = () => {
-  const randomIndex = Math.floor(Math.random() * phrase.length - 1);
-  const randomContent = phrase[`${randomIndex}`];
+  const randomIndex = Math.floor(Math.random() * phrase.length);
+  const randomContent = phrase[randomIndex];
 
   text.textContent = randomContent.text;
   author.textContent = `- ${randomContent.author} -`;
@@ -38,17 +38,43 @@ const headerContent = () => {
 
 headerContent();
 
+// work
 const workItems = document.querySelectorAll(".work__item");
-const modal = document.querySelectorAll(".modal");
-const closeBtn = document.querySelectorAll(".close");
-console.log(workItems);
+const workModals = document.querySelectorAll(".work__modal");
+const closeBtns = document.querySelectorAll(".close");
 
-function modalToggle(num) {
-  workItems[num].addEventListener("click", () => {
-    modal[num].classList.remove("hidden");
+function modalOpen(num) {
+  console.log("before" + num);
+  console.log(workModals[num]);
+  workItems[num].addEventListener("click", (e) => {
+    if (e.defaultPrevented) return;
+    if (workModals[num]) {
+      workModals[num].classList.remove("hidden");
+      console.log("after" + num);
+      console.log(workModals[num].classList);
+    }
+  });
+}
+
+function modalClose(num) {
+  if (closeBtns[num]) {
+    closeBtns[num].addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (workModals[num]) {
+        workModals[num].classList.add("hidden");
+      }
+    });
+  }
+
+  workModals[num].addEventListener("click", (e) => {
+    e.stopPropagation();
+    if (workModals[num]) {
+      workModals[num].classList.add("hidden");
+    }
   });
 }
 
 for (let i = 0; i < workItems.length; i++) {
-  modalToggle(i);
+  modalOpen(i);
+  modalClose(i);
 }
